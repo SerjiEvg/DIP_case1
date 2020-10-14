@@ -1,4 +1,4 @@
-I = imread('leo1.jpg');
+I = imread('leo.jpg');
 origIm = rgb2gray(I);
 subplot(2,3,1);
 imshow(origIm);

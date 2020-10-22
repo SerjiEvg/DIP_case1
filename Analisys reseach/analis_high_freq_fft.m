@@ -1,8 +1,8 @@
-I = imread('leo.jpg');
+I = imread('leo1.jpg');
 origIm = rgb2gray(I);
 subplot(2,3,1);
 imshow(origIm);
-%Применение гауссова фильтра
+%Применение фильтров
 sigma = 2;
 gaussian = imfilter(origIm, fspecial('gaussian',[5 5], sigma));
 littleBlurredIm = imfilter(origIm, fspecial('motion',5,45),'replicate');
@@ -41,9 +41,10 @@ zlim([5E+3 inf]);
 %[x, y]=meshgrid(1:N,1:M);
 %mesh(x,y, angle(h));
 %Вычисление меры
-m1 = max(max(h1))/10000;
-m2 = max(max(h2))/10000;
-m3 = max(max(h3))/10000;
+m1 = max(max(abs(h1)))/10000;
+m2 = max(max(abs(h2)))/10000;
+m3 = max(max(abs(h3)))/10000;
+
 k1=0;
 k2=0;
 k3=0;

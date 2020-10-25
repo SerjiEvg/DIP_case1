@@ -43,12 +43,12 @@ for n=1:10000
     ITER_T = ITER_T+0.000001
 end
 subplot(1,1,1);
+semilogx(RESULT(1,:),RESULT(2,:),'.-r');
 hold on;
 grid on;
-plot(RESULT(1,:),RESULT(2,:),'.-r');
-plot(RESULT(1,:),RESULT(3,:),'*-g');
-plot(RESULT(1,:),RESULT(4,:),'o-b');
-save 'E:\REPOS\DIP_case1\Analisys reseach\experiments\RESULT_gaus_sigma_10_motion_17_45.mat' RESULT -ascii -tabs;
+semilogx(RESULT(1,:),RESULT(3,:),'*-g');
+semilogx(RESULT(1,:),RESULT(4,:),'o-b');
+save 'E:\REPOS\DIP_case1\Analisys reseach\experiments\RESULT_leo1_sigma_10_motion_17_45.mat' RESULT -ascii -tabs;
 %clear all;
 
 

@@ -1,4 +1,4 @@
-I = imread('leo1.jpg'); 
+I = imread('Test Image/test_im1.jpg'); 
 I2 = I.*0.3;
 I3 = I.*2;
 grayIm1 = rgb2gray(I);
@@ -53,6 +53,7 @@ d_p3 = sqrt(double((r3-R3).^2 + (g3-G3).^2 + (b3-B3).^2));
 d3 = mean2(d_p3);
 tone_contrast3 = d3 / dmax;
 
+M=800;
 subplot(2,3,1);
 imshow(I);
 text(4,M+30,strcat('brightness = ',num2str(brightness1)));
